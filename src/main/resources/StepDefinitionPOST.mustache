@@ -1,0 +1,39 @@
+package com.webapi.features.steps.api.steps;
+
+import cucumber.api.DataTable;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import cucumber.api.java.en.And;
+import net.thucydides.core.annotations.Steps;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+
+import com.webapi.modules.api.actions.{{actionClassName}};
+
+import java.util.List;
+import java.util.Map;
+
+public class {{stepDefinitionClassName}} {
+	@Steps
+	{{actionClassName}} {{actionClassName}};
+
+	@Given("^user set parameter to {{feature}} with following details$")
+	public void setParameterTo{{feature}}(DataTable {{feature}}DetailsTable) {
+		List<Map<String, String>> {{feature}}DetailsMap = {{feature}}DetailsTable.asMaps(String.class, String.class);
+		{{actionClassName}}.setParameterTo{{feature}}({{feature}}DetailsMap);
+	}
+
+
+	@When("^user post a {{apiMethod}} request to {{feature}} API$")
+	public void postA{{apiMethod}}RequestTo{{feature}}() {
+		{{actionClassName}}.postA{{apiMethod}}RequestTo{{feature}}();
+	}
+
+	@Then("^validate that response of {{feature}} API should have status code as (\\d+)$")
+	public void verify{{feature}}ResponseCode(int statusCode) {
+		assertThat("Verify status code for {{feature}} : ", {{actionClassName}}.getStatusCodeOfResponse(),
+				equalTo(statusCode));
+	}
+
+}

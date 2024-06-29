@@ -1,0 +1,10 @@
+{
+   "name":"Auto Campaign ",
+   "budget_type":"impression",
+   "advertiser_id":"Dependent",
+   "viewability_standard_provider":"iab",
+   "start_date":"",
+   "end_date":"",
+   "lifetime_budget_revenue":"",
+   "lifetime_budget_imps":"100000"
+}

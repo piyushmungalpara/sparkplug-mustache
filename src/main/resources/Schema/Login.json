@@ -1,0 +1,8 @@
+{
+   "client_id":"i9U1VsE0mmVFYBpyhUtmWyJDP3ok7jfz",
+   "username":"supradipd@cybage.com",
+   "password":"cybage@123",
+   "realm":"Username-Password-Authentication",
+   "grant_type":"http://auth0.com/oauth/grant-type/password-realm",
+   "scope":"openid profile email"
+}

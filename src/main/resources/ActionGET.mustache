@@ -1,0 +1,43 @@
+package com.webapi.features.steps.api.steps;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
+import org.apache.log4j.Logger;
+
+import com.webapi.factory.DependencyManager;
+import com.webapi.factory.MapBuilderFromJsonString;
+import com.webapi.models.{{feature}}.{{feature}};
+import com.webapi.modules.api.builders.ResponseBuilder;
+
+import io.restassured.mapper.ObjectMapperType;
+import io.restassured.response.Response;
+import net.serenitybdd.rest.SerenityRest;
+import net.thucydides.core.annotations.Step;
+
+
+import java.util.List;
+import java.util.Map;
+
+public class {{actionClassName}} {
+	private Response response;
+    private static Logger LOG = Logger.getLogger("");
+
+	@Step
+    public void postA{{apiMethod}}RequestTo{{feature}}() {
+        response = SerenityRest.given().contentType("application/json")
+                .when().get("{{apiURL}}");
+
+        LOG.info("Response of {{feature}} API: " + response.asString());
+        LOG.info("Response Code of {{feature}} API: " + response.statusCode());
+
+        {{feature}} obj = ({{feature}}Response) MapBuilderFromJsonString
+                .buildFromJsonString({{feature}}.class, response).get();
+        DependencyManager.getInjector().getInstance(ResponseBuilder.class).set{{feature}}(obj);
+    }
+
+    @Step
+    public int getStatusCodeOfResponse() {
+        return response.then().extract().statusCode();
+    }
+}

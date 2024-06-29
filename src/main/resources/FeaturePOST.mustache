@@ -1,0 +1,8 @@
+Feature: Validate {{feature}}
+
+  Scenario: Validate that user should be able to {{feature}}
+    Given user set parameter to {{feature}} with following details
+    {{columnHeaders}}
+    {{fieldValues}}
+    When user post a POST request to {{feature}} API
+    Then validate that response of {{feature}} API should have status code as 200

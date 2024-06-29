@@ -1,0 +1,32 @@
+{
+	"Bingsearchadresponse": {
+		"url": "https://ffdashboard.dev.balihoo-cloud.com/workflow/triage",
+		"method": "GET",
+		"type": "response",
+		"createFeature": "true"
+	},
+	"Facebookimageadresponse": {
+		"url": "https://ffdashboard.dev.balihoo-cloud.com/workflow/triage",
+		"method": "GET",
+		"type": "response",
+		"createFeature": "true"
+	},
+	"Googlesearchnetworkresponse": {
+		"url": "https://ffdashboard.dev.balihoo-cloud.com/workflow/triage",
+		"method": "GET",
+		"type": "response",
+		"createFeature": "true"
+	},
+	"Localwebsitesresponse": {
+		"url": "https://ffdashboard.dev.balihoo-cloud.com/workflow/triage",
+		"method": "GET",
+		"type": "response",
+		"createFeature": "true"
+	},
+	"Sendgridemailresponse": {
+		"url": "https://ffdashboard.dev.balihoo-cloud.com/workflow/triage",
+		"method": "GET",
+		"type": "response",
+		"createFeature": "false"
+	}
+}

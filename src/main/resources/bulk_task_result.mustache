@@ -1,0 +1,54 @@
+<head>
+<style>
+body { font-family:arial; font-size:12px; color: #000000; }    h1 { font-size:16px; }    h2 { font-size:14px;}  table{width:600px;border-collapse: collapse; 
+border-right:1px solid #000000;border-left:1px solid #000000;border-top:1px solid #000000;border-bottom:1px solid #000000; padding:0; margin:0; }    th {border-right: 1px solid #000000; border-bottom:1px solid #000000;background:#4183d7; font-size:14px; font-weight:bold; color:#fff; width:200px; text-align:left;
+ padding:7px;} .bold-text{font-weight:bold;} .cs-wrap{word-break:break-all;} .green-color{font-color:#008000;}  p {display: block; margin-bottom: 0px;  margin-top: 0px; font-weight: normal;} td {padding:7px; border-right:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;}    .alt td{ background:#e7e7e7;}    img {width:100px; height:30px
+</style>
+</head>
+<body>
+
+Hello All, </br></br>
+<div>Verification of the AdTags in the system has been completed. Verification details are as below: </div>
+</br>
+{{#baseDetails}}
+<table>
+<tr>
+<th colspan=2>Overall Statistics
+</th>
+
+</tr>
+<tr>
+<td class='bold-text'>Total Tags Verified</td><td>{{{totalExecutions}}}</td>
+</tr>
+<tr>
+<td class='bold-text'>Working Tags</td><td>{{{successExecution}}}</td>
+</tr>
+<tr>
+<td class='bold-text'>Failed Tags</td><td>{{{failedExecutions}}}</td>
+</tr>
+</table>
+{{/baseDetails}}
+
+<br /><br />
+
+Details of the failed Tags are as below:
+<br /><br />
+<table>
+<tr>
+	<th>Status</th>
+	<th>Ad</th>
+	<th>Ad Tag</th>
+	<th>Campaign</th>
+	<th>Placement</th>
+	<th>Flight</th>
+</tr>	
+{{#tableRow}}<tr>{{{keyValue}}}</tr>{{/tableRow}}</table>	
+<br /><br />
+Note: The AdTags were updated during the Test Process to bypass the decisioning and PPD rejections. 
+<br /><br />
+Regards,<br />
+Clearstream Team
+
+<hr />
+** Please do not reply to this email as this is an auto-generated email. 
+</body>
